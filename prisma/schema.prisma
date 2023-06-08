@@ -20,6 +20,6 @@ model Recipe {
   name String
   description String
   preparationTime Float
-  user User @relation(fields: [userId],references: [id])
+  user User @relation(fields: [userId],references: [id], onDelete: Cascade)
   userId Int
 }
